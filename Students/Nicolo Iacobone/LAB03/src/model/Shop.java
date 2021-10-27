@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Shop {
 
@@ -19,12 +19,12 @@ public class Shop {
         return category;
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Product getProduct() {
+        return product;
     }
 
     public void setProduct(Product product) {
