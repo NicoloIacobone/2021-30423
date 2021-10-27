@@ -7,7 +7,7 @@ public class Course {
     public String roomName;
 
     //Costruttori
-    public Course() {/*System.out.println("Blank Course");*/}
+    public Course() {}
 
     public Course(String courseName, Integer creditsNumber, Integer[] roomNumbers) {
         this.courseName = courseName;

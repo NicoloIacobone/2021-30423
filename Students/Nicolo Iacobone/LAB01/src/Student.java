@@ -8,7 +8,7 @@ public class Student {
     public String lastName;
 
     //Costruttori
-    public Student() {/*System.out.println("Blank Student");*/}
+    public Student() {}
 
     public Student(String firstName, String lastName, String uniqueIdentificationNumber) {
         this.uniqueIdentificationNumber = uniqueIdentificationNumber;
@@ -17,7 +17,6 @@ public class Student {
     }
 
     //Getter
-
     public String getFirstName() {
         return firstName;
     }

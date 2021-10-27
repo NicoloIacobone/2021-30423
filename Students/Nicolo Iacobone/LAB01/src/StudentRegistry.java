@@ -6,18 +6,18 @@ public class StudentRegistry {
     private int pos = 0;
 
     //Costruttori
-    public StudentRegistry() {System.out.println("Blank studentRegistry"); }
+    public StudentRegistry() {}
     public StudentRegistry(Student[] arrayStudents, String studentId) {
         this.arrayStudents = arrayStudents;
         this.studentId = studentId;
     }
 
     //Getter
-
     public String getStudentId() {
         return this.studentId;
     }
-    public void getArrayStudents() {
+
+    public void displayStudents() {
         for (int i=0; i < arrayStudents.length; i++) {
             if (arrayStudents[i] != null) {
                 System.out.println(arrayStudents[i].firstName + " " + arrayStudents[i].lastName);
@@ -26,8 +26,7 @@ public class StudentRegistry {
     }
 
     //Setter
-    
-    public void setStudent(Student student){
+    public void addStudent(Student student){
         arrayStudents[pos] = student;
         pos++;
     }

@@ -18,16 +18,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Student[] students = new Student[15];
 
-        Student student0 = new Student("Iacobone", "Nicolo'", "012");
-        Student student1 = new Student("Loconsole", "Christian", "018");
-        Student student2 = new Student("Chieppa", "Giovanni", "022");
-        Student student3 = new Student("Bottalico", "Alessio", "077");
-        Student student4 = new Student("Galimberti", "Marco", "039");
-        Student student5 = new Student("Rutigliano", "Sonia", "011");
-        Student student6 = new Student("Tesser", "Lucilla", "013");
-        Student student7 = new Student("Spontella", "Giacoma", "055");
-        Student student8 = new Student("De Nicolo", "Luisa", "043");
-        Student student9 = new Student("Lutencu", "Ludmila", "090");
+        Student student0 = new Student();
+        Student student1 = new Student();
+        Student student2 = new Student();
+        Student student3 = new Student();
+        Student student4 = new Student();
+        Student student5 = new Student();
+        Student student6 = new Student();
+        Student student7 = new Student();
+        Student student8 = new Student();
+        Student student9 = new Student();
         Student student10 = new Student();
         Student student11 = new Student();
         Student student12 = new Student();
@@ -64,7 +64,7 @@ public class Main {
         Path fileName = Path.of("resources/student-register.txt");
         List<String> fileContent = Files.readAllLines(fileName);
 
-        int i = 10;
+        int i = 0;
         for (String line : fileContent) {
             String[] lineWords = line.split(" ");
             String firstName = lineWords[0];
@@ -74,15 +74,12 @@ public class Main {
             students[i].setLastName(lastName);
             students[i].setUniqueIdentificationNumber(uniqueId);
             i++;
-            //System.out.println(firstName + " " + lastName);
         }
 
         for(i=0; i < students.length; i++) {
-            registry.setStudent(students[i]);
+            registry.addStudent(students[i]);
             System.out.println(students[i].getFullName());
         }
-
-        registry.getArrayStudents();
 
         Path fileName1 = Path.of("resources/course-register.txt");
         List<String> fileContent1 = Files.readAllLines(fileName1);
@@ -100,7 +97,6 @@ public class Main {
 
             System.out.println(allCourses[i].getCourseName() + " " + allCourses[i].getCreditsNumber() + " " + allCourses[i].getRoomNumbers());
             i++;
-            //System.out.println(firstName + " " + lastName);
         }
     }
 }
